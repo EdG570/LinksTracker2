@@ -47,7 +47,7 @@ namespace LinksTracker2.Repositories
         {
             _db.SaveChanges();
         }
-
+        
         public void Update(Course record)
         {
             _db.Entry(record).State = EntityState.Modified;
