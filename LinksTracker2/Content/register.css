@@ -1,0 +1,27 @@
+﻿/*
+    COLOR PALETTE:
+    Base Green: #197248
+    #8FB996
+    Light Green: #A1CCA5
+    Black: #111D13
+*/
+
+h4 {
+    background-color: #197248;
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.75em;
+    border-radius: 0 0 5px 5px;
+}
+
+.btn, .btn-lg {
+    width: 100%;
+    color: #fff;
+    background-color: #197248;
+}

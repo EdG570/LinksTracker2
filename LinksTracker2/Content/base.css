@@ -1,1 +1,41 @@
 ﻿/* ------------------- BASE STYLES ------------------------ */
+
+/*
+    COLOR PALETTE:
+    Base Green: #197248
+    #8FB996
+    Light Green: #A1CCA5
+    Black: #111D13
+*/
+
+html, body {
+    min-height: 100%;
+}
+
+body { 
+  background-image: url(../Content/images/main-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.body-content {
+    padding-top: 70px;
+}
+
+button {
+    padding: 0.5em 1em;
+    color: #A1CCA5;
+    border-radius: 5px;
+}
+
+.navbar {
+    background-color: #197248;
+    color: #fff;
+}
+
+.navbar .navbar-nav li > a,
+.navbar-header .navbar-brand {
+    color: #fff;
+}
+
