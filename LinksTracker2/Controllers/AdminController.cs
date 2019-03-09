@@ -2,14 +2,11 @@
 
 namespace LinksTracker2.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
+        // GET: Admin
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Profile()
         {
             return View();
         }

@@ -1,0 +1,44 @@
+﻿/*
+    COLOR PALETTE:
+    Base Green: #197248
+    #8FB996
+    Light Green: #A1CCA5
+    Black: #111D13
+*/
+
+#profile-cont {
+    display: grid;
+    grid-template-areas:
+        "play"
+        "profile"
+        "courses";
+    margin-top: 2em;
+}
+
+.profile-option {
+    background-color: #197248;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.profile-option:hover {
+    cursor: pointer;
+    background-color: #1c8051;
+}
+
+a {
+    color: #fff;
+    font-size: 2em;
+    padding: 0.25em;
+}
+
+a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 200;
+}

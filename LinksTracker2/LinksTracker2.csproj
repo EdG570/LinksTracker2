@@ -196,11 +196,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlayController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903091757256_InitialCreate.cs" />
+    <Compile Include="Migrations\201903091757256_InitialCreate.Designer.cs">
+      <DependentUpon>201903091757256_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903092057508_InitialMigrationWithSeeds.cs" />
+    <Compile Include="Migrations\201903092057508_InitialMigrationWithSeeds.Designer.cs">
+      <DependentUpon>201903092057508_InitialMigrationWithSeeds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Hole.cs" />
@@ -216,6 +227,7 @@
     <Content Include="Content\images\main-background.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\profile.css" />
     <Content Include="Content\register.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -270,6 +282,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Play\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +298,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903091757256_InitialCreate.resx">
+      <DependentUpon>201903091757256_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903092057508_InitialMigrationWithSeeds.resx">
+      <DependentUpon>201903092057508_InitialMigrationWithSeeds.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

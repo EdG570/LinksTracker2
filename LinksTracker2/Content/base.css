@@ -10,6 +10,7 @@
 
 html, body {
     min-height: 100%;
+    letter-spacing: 1px;
 }
 
 body { 
@@ -17,6 +18,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, span {
+   font-family: 'Roboto', sans-serif;
+}
+
+p {
+    line-height: 1.4;
 }
 
 .body-content {
