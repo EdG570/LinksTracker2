@@ -9,6 +9,7 @@ namespace LinksTracker2.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Profile()
         {
             return View();

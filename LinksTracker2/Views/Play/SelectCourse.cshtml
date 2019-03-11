@@ -1,14 +1,75 @@
-﻿
+﻿@using System.Web.UI.WebControls
+@model LinksTracker2.ViewModels.SelectCourseViewModel
+
 @{
     ViewBag.Title = "Index";
 }
 
+@Styles.Render("~/Content/select-course.css")
+@Styles.Render("~/Content/play-panel.css")
 
-<div id="form-cont">
-    <h2>Select a Course</h2>
-    @using (Html.BeginForm("SelectCourse", "Play", FormMethod.Post, new {id = "course-select-form"}))
+<div class="alert alert-danger">
+    <p>An error has occurred. Please try again.</p>
+</div>
+
+<div id="form-cont" class="form-group">
+    <h4>Select a Course</h4>
+    @using (Html.BeginForm("SelectCourse", "Play", FormMethod.Post, new { id = "course-select-form" }))
     {
-        
+        <p class="error-msg">A course is required</p>
+        @Html.DropDownList("SelectedCourse", Model.Courses, "-- Select a Course --", new { id = "course-select", @class = "form-control" })
+        <button type="submit" class="btn btn-lg">Next</button>
     }
 </div>
 
+<h4 id="hole-num-header">Hole <span id="header-hole-number"></span><span id="holeId"></span></h4>
+<div id="cont">   
+    <div id="scorecard-stats-cont">
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#stats-form" aria-controls="stats-form" role="tab" data-toggle="tab">New Stat</a></li>
+                <li role="presentation"><a href="#scorecard" aria-controls="scorecard" role="tab" data-toggle="tab">Scorecard</a></li>
+                <li role="presentation"><a href="#stats" aria-controls="stats" role="tab" data-toggle="tab">Stats</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="stats-form">
+                    <form role="form" id="user-stats-form">
+                        <span id="fir" class="btn btn-lg input-btn">FIR</span>
+                        <span id="gir" class="btn btn-lg input-btn">GIR</span>
+                        <span id="upanddown" class="btn btn-lg input-btn">Up and Down</span>
+
+                        <div class="form-group">
+                            <p class="error-msg">Penalties is required</p>
+                            <input class="form-control" type="number" placeholder="Penalties" id="penalties"/>
+                        </div>
+                        <div class="form-group">
+                            <p class="error-msg">Putts is required</p>
+                            <input class="form-control" type="number" placeholder="Putts" id="putts"/>
+                        </div>
+                        <div class="form-group">
+                            <p class="error-msg">Score is required</p>
+                            <input class="form-control" type="number" placeholder="Score" id="score"/>
+                        </div>
+                        <button id="stats-submit-btn" type="submit">Next Hole</button>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="scorecard">
+                    <table id="scorecard-tbl"></table>   
+                </div>
+                <div role="tabpanel" class="tab-pane" id="stats">
+                    <div id="stats-donut"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+@Scripts.Render("~/Scripts/play.js")

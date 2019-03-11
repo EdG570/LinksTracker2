@@ -1,0 +1,80 @@
+﻿/*
+    COLOR PALETTE:
+    Base Green: #197248
+    #8FB996
+    Light Green: #A1CCA5
+    Black: #111D13
+*/
+
+#cont {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    padding: 1em;
+}
+
+#scorecard-stats-cont .tab-content {
+    background-color: #fff;
+    padding: 1em;
+}
+
+.nav-tabs > li.active {
+    background-color: #A1CCA5;
+}
+
+#scorecard-tbl {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#scorecard-tbl th,
+#scorecard-tbl td {
+    border: 1px solid #333;
+    background-color: #fff;
+    text-align: center;
+}
+
+#scorecard-tbl tr:nth-child(even) td {
+    background-color: rgba(161, 204, 165, 0.8);
+}
+
+#stats-form #fir,
+#stats-form #gir,
+#stats-form #upanddown {
+    background-color: #777;
+    margin-bottom: 0.5em
+}
+
+#stats-form #fir:hover,
+#stats-form #gir:hover,
+#stats-form #upanddown:hover {
+    color: #fff;
+}
+
+#stats-submit-btn {
+    width: 100%;
+    background-color: #197248;
+}
+
+.selected {
+    background-color: #A1CCA5;
+}
+
+#scorecard-tbl .scorecard-total {
+    background-color: #197248;
+    color: #fff;
+}
+
+#scorecard-tbl .hidden-td {
+    border: none;
+}
+
+h4#current-stats {
+    border-radius: 0 0 5px 5px;
+    font-size: 1em;
+}
+
+#stats-donut {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}

@@ -200,6 +200,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayController.cs" />
+    <Compile Include="Controllers\StatsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,6 +213,14 @@
     <Compile Include="Migrations\201903092057508_InitialMigrationWithSeeds.Designer.cs">
       <DependentUpon>201903092057508_InitialMigrationWithSeeds.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903102211151_CreatedUserScoreStatsSp2.cs" />
+    <Compile Include="Migrations\201903102211151_CreatedUserScoreStatsSp2.Designer.cs">
+      <DependentUpon>201903102211151_CreatedUserScoreStatsSp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903102353022_AddRelatedCollectionsToModels.cs" />
+    <Compile Include="Migrations\201903102353022_AddRelatedCollectionsToModels.Designer.cs">
+      <DependentUpon>201903102353022_AddRelatedCollectionsToModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -221,7 +230,9 @@
     <Compile Include="Models\Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CourseRepository.cs" />
+    <Compile Include="Repositories\StatsRepository.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\SelectCourseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -229,8 +240,10 @@
     <Content Include="Content\images\main-background.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\play-panel.css" />
     <Content Include="Content\profile.css" />
     <Content Include="Content\register.css" />
+    <Content Include="Content\select-course.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -249,6 +262,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\play.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -287,10 +301,10 @@
     <Content Include="Views\Home\Profile.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Play\SelectCourse.cshtml" />
+    <Content Include="Views\Stats\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -306,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903092057508_InitialMigrationWithSeeds.resx">
       <DependentUpon>201903092057508_InitialMigrationWithSeeds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903102211151_CreatedUserScoreStatsSp2.resx">
+      <DependentUpon>201903102211151_CreatedUserScoreStatsSp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903102353022_AddRelatedCollectionsToModels.resx">
+      <DependentUpon>201903102353022_AddRelatedCollectionsToModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
